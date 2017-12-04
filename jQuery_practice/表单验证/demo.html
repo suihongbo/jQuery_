@@ -38,10 +38,14 @@
 	<div class="int">
 		<label for="username">用户名:</label>
 		<input type="text" id="username" class="required" />
+		<span class="on-error">请输入至少6位数用户名</span>
+		<span class="on-succese">输入正确</span>
 	</div>
 	<div class="int">
 		<label for="email">邮箱:</label>
 		<input type="text" id="email" class="required" />
+		<span class="on-error">请输入至少6位数邮箱</span>
+		<span class="on-succese">输入正确</span>
 	</div>
 	<div class="int">
 		<label for="personinfo">个人资料:</label>
@@ -54,7 +58,43 @@
 
 
 <script>
-    $(':input.required').each(function () {
+	$('.required').on('click',function () {
+	    if($(this).val().length < 6){
+            $(this).siblings('.on-error').show();
+		}
+    }).on('keyup',function () {
+        var $this = $(this);
+        if($this.is('#username')){
+            judge($this);
+		}
+        if($this.is('#email')) {
+            judge($this);
+        }
+        })
+	function judge(the) {
+        if(the.val().length >= 6){
+            the.siblings('.on-succese').show().end().siblings('.on-error').hide();
+        }
+        if(the.val().length < 6 || the.val() == ''){
+            the.siblings('.on-succese').hide().end().siblings('.on-error').show();
+        }
+    }
+
+    $('#send').on('click',function () {
+		$('.required').triggerHandler('keyup');
+
+		if($('.on-succese:visible').length == 2){
+		    alert('成功');
+		}else {
+		    alert('失败');
+		}
+    })
+
+
+
+
+
+    /*$(':input.required').each(function () {
 		var $star = $('<strong class="high">*</strong>');
 		$star.insertAfter(this);
     }).blur(function () {
@@ -88,8 +128,7 @@
     });
     $('#res').on('click',function () {
 		$('.formtips').remove();
-    })
-
+    })*/
 </script>
 
 

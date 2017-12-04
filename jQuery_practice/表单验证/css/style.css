@@ -16,3 +16,13 @@ form div { margin:5px 0;}
 .high{
     color:red;
 }
+.on-error{
+    background:#FFE0E9 url(../img/reg3.gif) no-repeat 0 center;
+    padding-left:25px;
+    display: none;
+}
+.on-succese{
+    background:#E9FBEB url(../img/reg4.gif) no-repeat 0 center;
+    padding-left:25px;
+    display: none;
+}

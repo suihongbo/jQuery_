@@ -20,6 +20,11 @@
 			tbody th{
 				background-color:#abc;
 			}
+            .editable input{
+                width: 97%;
+                background: transparent;
+                border: none;
+            }
         </style>
 		<script src="../../jquery-1.12.4.js" type="text/javascript"></script>
     </head>
@@ -54,13 +59,21 @@
             </tbody>
         </table>
         <script>
-            $(function () {
-                $('tbody tr:odd').css('background-color','#ff6700');
-                var $editTd = $('td.editable');
-                $editTd.on('click',function () {
-                    
-                })
+            $('tbody tr:odd').css('background-color','rgb(255,103,1)');
+            $('.editable').on('click',function () {
+                if($(this).find('input').size() > 0){
+                    return false;
+                }
+                var $val = $(this).html();
+                $(this).html('<input type="text" value="'+$val+'"/>').find('input').trigger('select');
             })
+            $('.editable').on('keyup','input',function (e) {
+                if(e.which == 13){
+                    var $text = $(this).val();
+                    $(this).parent().html($text);
+                }
+            })
+
 
 
         </script>

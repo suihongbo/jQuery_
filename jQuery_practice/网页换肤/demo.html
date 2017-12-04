@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页换肤</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            padding: 5px 0;
+            border: 1px solid #000;
+            overflow: hidden;
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        #skin-btn li{
+            float: left;
+            width: 14px;
+            height: 14px;
+            margin-left: 5px;
+            background: url("css/theme.gif") 0 0 no-repeat;
+            cursor:pointer;
+        }
+        #skin-btn #skin-0.selected{
+            background-position: 0 -15px;
+        }
+        #skin-btn #skin-1{
+            background-position: -20px 0;
+        }
+        #skin-btn #skin-1.selected{
+            background-position: -20px -15px;
+        }
+        #skin-btn #skin-2{
+            background-position: -40px 0;
+        }
+        #skin-btn #skin-2.selected{
+            background-position: -40px -15px;
+        }
+        #skin-btn #skin-3{
+            background-position: -60px 0;
+        }
+        #skin-btn #skin-3.selected{
+            background-position: -60px -15px;
+        }
+        #skin-btn #skin-4{
+            background-position: -80px 0;
+        }
+        #skin-btn #skin-4.selected{
+            background-position: -80px -15px;
+        }
+        #skin-btn #skin-5{
+            background-position: -100px 0;
+        }
+        #skin-btn #skin-5.selected{
+            background-position: -100px -15px;
+        }
+        #content div{
+            width: 100px;
+            height: 40px;
+            margin-right: 10px;
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            color: #fff;
+            cursor:pointer;
+        }
+        #content.skin-0 div{
+            background: #999999;
+        }
+        #content.skin-1 div{
+            background: #AFD400;
+        }
+        #content.skin-2 div{
+            background: #FBA60A;
+        }
+        #content.skin-3 div{
+            background: #08BECE;
+        }
+        #content.skin-4 div{
+            background: #E31559;
+        }
+        #content.skin-5 div{
+            background: #BB3BD9;
+        }
+    </style>
+</head>
+<body>
+<ul id="skin-btn">
+    <li id="skin-0"></li>
+    <li id="skin-1"></li>
+    <li id="skin-2"></li>
+    <li id="skin-3"></li>
+    <li id="skin-4"></li>
+    <li id="skin-5"></li>
+</ul>
+<div id="content">
+    <div>时事新闻</div>
+    <div>娱乐新闻</div>
+</div>
+<script src="../../jquery-1.12.4.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script>
+    var $skin = $.cookie('mySkin') || 'skin-0';
+    $('#skin-btn li').on('click',function () {
+        $(this).addClass('selected').siblings().removeClass('selected');
+        $skin = $(this).attr('id');
+        $('#content').attr('class',$skin);
+        $.cookie('mySkin',$skin,{espires:14});
+    });
+
+    $('#'+$skin).trigger('click');
+
+
+
+   /* function setCookie(key, value, expires) {
+        var str = key +'='+value+';';
+        if(expires){
+            var date =new Date();
+            date.setDate(date.getDate()+expires);
+            str += "expires="+date;
+        }
+        document.cookie = str;
+    }
+//    setCookie('skin','skin_1',30);
+
+    function getCookie(key) {
+        var str = document.cookie;
+        var arr = str.split('; ');
+        for(var i=0; i<arr.length; i++){
+            var arr1 = arr[i].split('=');
+            if(arr1[0] == key){
+                return arr1[1];
+            }
+        }
+    }
+//    console.log(getCookie('skin'));
+
+    function removeCookie(key) {
+        setCookie(key,'',-1);
+    }
+
+    //   removeCookie('skin');*/
+</script>
+</body>
+</html>
