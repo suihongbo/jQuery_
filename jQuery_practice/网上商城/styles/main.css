@@ -224,7 +224,7 @@
     color: #444444;
 }
 .jnCatainfo li a:hover{
-    color: #008CD7;
+    color: #37C7D4;
     text-decoration: none;
 }
 .jnCatainfo li a.promoted{
@@ -386,11 +386,11 @@
     padding: 0 10px;
 }
 #jnBrandTab .chos {
-    background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;
+    /*background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;*/
     padding-bottom: 3px;
 }
 #jnBrandTab .chos a {
-    background-color: #FA5889;
+    background-color: #4A4A4A;
     color: #FFFFFF;
     outline: 0 none;
 }
@@ -641,10 +641,10 @@ ul.rating li.five a:hover {background-position:0 -160px}
 /* tooltip */
 #tooltip{
 	position:absolute;
-	border:1px solid #333;
-	background:#f7f5d1;
+	border:1px solid #eee;
+	background:deepskyblue;
 	padding:1px;
-	color:#333;
+	color:#fff;
 	display:none;
 }
 /* imgHover */

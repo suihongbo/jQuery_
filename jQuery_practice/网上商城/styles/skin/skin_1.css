@@ -4,3 +4,8 @@
 #jnCatalog h2 {
     background-color: #D49AE1;
 }
+#jnBrandTab .skin-color a {
+    background-color: #BE46D8;
+    color: #FFFFFF;
+    outline: 0 none;
+}

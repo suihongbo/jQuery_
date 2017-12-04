@@ -11,9 +11,7 @@ $(function(){
 		$(this).toggleClass("imageOver");
 	});
 	
-	/*
-	$("#jnBrandList").find(".imageMask").live("hover", function(){
+	/*$("#jnBrandList").find(".imageMask").live("hover", function(){
 		$(this).toggleClass("imageOver");
-	});
-	*/
+	});*/
 })
