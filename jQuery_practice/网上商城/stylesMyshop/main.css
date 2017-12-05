@@ -1,6 +1,6 @@
 /*头部样式开始*/
 #header{
-	background: url("../images/headerbg.png") repeat-x scroll 0 0 #FFFFFF;
+	background: url("../imagesMyshop/headerbg.png") repeat-x scroll 0 0 #FFFFFF;
     height: 105px;
 }
 #header .contWidth {
@@ -48,7 +48,7 @@
 	overflow:hidden; 
 	display:block; 
 	cursor:pointer; 
-	background-image:url("../images/theme.gif"); 
+	background-image:url("../imagesMyshop/theme.gif");
 }
 #skin_0 { background-position:0px 0px; }
 #skin_1 { background-position:15px 0px; }
@@ -231,7 +231,7 @@
 	color:#F9044E;
 }
 .jnCatainfo li .hot {
-    background: url("../images/hot.gif") no-repeat scroll 0 0 transparent;
+    background: url("../imagesMyshop/hot.gif") no-repeat scroll 0 0 transparent;
     height: 16px;
     position: absolute;
     top: 0;
@@ -288,7 +288,7 @@
     width: 80px;
 }
 #jnImageroll a.chos {
-    background: url("../images/adindex.gif") no-repeat center 39px #37A7D7;
+    background: url("../imagesMyshop/adindex.gif") no-repeat center 39px #37A7D7;
     color: #FFFFFF;
 }
 /* 最新动态 */
@@ -386,7 +386,7 @@
     padding: 0 10px;
 }
 #jnBrandTab .chos {
-    /*background: url("../images/chos.gif") no-repeat scroll 50% bottom transparent;*/
+    /*background: url("../imagesMyshop/chos.gif") no-repeat scroll 50% bottom transparent;*/
     padding-bottom: 3px;
 }
 #jnBrandTab .chos a {
@@ -588,7 +588,7 @@
 	list-style:none;
 	clear:both;
 	position:relative;
-	background: url(../images/star-matrix.gif) no-repeat 0 0;
+	background: url(../imagesMyshop/star-matrix.gif) no-repeat 0 0;
 }
 .nostar {background-position:0 0}
 .onestar {background-position:0 -16px}
@@ -621,7 +621,7 @@ ul.rating li a:hover {
 	height:16px;
 	overflow:hidden;
 	left:0;	
-	background: url(../images/star-matrix.gif) no-repeat 0 0
+	background: url(../imagesMyshop/star-matrix.gif) no-repeat 0 0
 }
 ul.rating li.one a:hover {background-position:0 -96px;}
 ul.rating li.two a:hover {background-position:0 -112px;}
@@ -655,7 +655,7 @@ ul.rating li.five a:hover {background-position:0 -160px}
 	cursor: pointer;
 }
 .imageOver{
-	background:url(../images/zoom.gif) no-repeat 50% 50%;	
+	background:url(../imagesMyshop/zoom.gif) no-repeat 50% 50%;
 	filter:alpha(opacity=60);
 	opacity: 0.6;	
 }
@@ -679,7 +679,7 @@ ul.rating li.five a:hover {background-position:0 -160px}
    background-color: white;
    padding: 8px;
    text-align:center;
-   background-image: url(../images/zoomloader.gif);
+   background-image: url(../imagesMyshop/zoomloader.gif);
    background-repeat: no-repeat;
    background-position: 43px 30px;
    z-index:110;

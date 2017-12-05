@@ -12,7 +12,7 @@ $(function(){
 		  $("#thickImg").attr("href", imgSrc_big);
 		  var alt = $(this).attr("alt");
 		  $(".color_change strong").text(alt);
-		  var newImgSrc = imgSrc.replace("images/pro_img/","");
+		  var newImgSrc = imgSrc.replace("imagesMyshop/pro_img/","");
 		  $("#jnProitem .imgList li").hide();
 		  $("#jnProitem .imgList").find(".imgList_"+newImgSrc).show();
 		  //解决问题：切换颜色后，放大图片还是显示原来的图片。

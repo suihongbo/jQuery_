@@ -8,7 +8,7 @@
  * http://jamazon.co.uk/web/2008/03/17/thickbox-31-ie7-positioning-bug/
 */
 		  
-var tb_pathToImage = "images/loadingAnimation.gif";
+var tb_pathToImage = "imagesMyshop/loadingAnimation.gif";
 
 /*!!!!!!!!!!!!!!!!! edit below this line at your own risk !!!!!!!!!!!!!!!!!!!!!!!*/
 
@@ -74,7 +74,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 	   var urlString = /\.jpg$|\.jpeg$|\.png$|\.gif$|\.bmp$/;
 	   var urlType = baseURL.toLowerCase().match(urlString);
 
-		if(urlType == '.jpg' || urlType == '.jpeg' || urlType == '.png' || urlType == '.gif' || urlType == '.bmp'){//code to show images
+		if(urlType == '.jpg' || urlType == '.jpeg' || urlType == '.png' || urlType == '.gif' || urlType == '.bmp'){//code to show imagesMyshop
 				
 			TB_PrevCaption = "";
 			TB_PrevURL = "";
@@ -109,7 +109,7 @@ function tb_show(caption, url, imageGroup) {//function called when the user clic
 			imgPreloader.onload = function(){		
 			imgPreloader.onload = null;
 			
-			// Resizing large images - orginal by Christian Montoya edited by me.
+			// Resizing large imagesMyshop - orginal by Christian Montoya edited by me.
 			var pagesize = tb_getPageSize();
 			var x = pagesize[0] - 150;
 			var y = pagesize[1] - 150;

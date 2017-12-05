@@ -29,7 +29,7 @@ $(function () {
     function changeSkin(skin) {
         // var  $skin = $(this).attr('id');
         $('#'+skin).attr('class','selected').siblings().removeClass('selected');
-        $('#cssfile').attr('href','styles/skin/'+skin+'.css');
+        $('#cssfile').attr('href','stylesMyshop/skin/'+skin+'.css');
         $.cookie('mySetSkin',skin, { path: '/', expires: 10 });
     }
 })
