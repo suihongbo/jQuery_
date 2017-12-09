@@ -77,7 +77,6 @@ $(function () {
    $('.tooltip').on('mouseover',function (e) {
        this.newTitle = this.title;
        this.title = '';
-       console.log(this.newTitle);
        $('body').append('<div id="tooltip">'+this.newTitle+'，买买买！'+'</div>');
        $('#tooltip').css({
            'left': (e.pageX+10)+'px',
