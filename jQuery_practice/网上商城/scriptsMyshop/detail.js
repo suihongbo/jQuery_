@@ -18,6 +18,7 @@ $(function () {
     })
 });
 
+
 $(function () {
     $('.imgList li img').on('click',function () {
         var $src = $(this).attr('src');
@@ -27,4 +28,4 @@ $(function () {
         var $format = $src.substring(i);
         $('#bigImg').attr('src',$path+'_small'+$format);
     })
-})
+});
